@@ -1,38 +1,164 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wild Rydes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta Rydes</title>
 
-  <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* ===== Base Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <script src="js/vendor/modernizr.js"></script>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #374151;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: #10b981;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d1d5db;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #10b981;
+    }
+
+    /* ===== Buttons ===== */
+    .home-button {
+      text-decoration: none;
+      background-color: #10b981;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.1s ease;
+      margin-left: 0.8rem;
+    }
+
+    .home-button:hover {
+      background-color: #059669;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: #d1d5db;
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: #111827;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      border-top: 1px solid #374151;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 640px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      header {
+        justify-content: center;
+      }
+      .home-button {
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
-<body class="page-home">
 
+<body>
   <header class="site-header">
-    <h1 class="title">Wild Rydes</h1>
+    <h1 class="title">🚗 Beta Rydes</h1>
     <nav class="site-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="unicorns.html">Meet the Unicorns</a></li>
-        <li><a href="investors.html">Investors &amp; Board of Directors</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="apply.html">Apply</a></li>
+        <li><a href="unicorns.html">Meet the Captains</a></li>
       </ul>
     </nav>
-    <button type="button" class="btn-menu"><span>Menu</span></button>
-    <a class="home-button" href="/register.html">New User?</a>
-    <a class="home-button" href="/login.html">Login</a>
+    <div>
+      <a class="home-button" href="/register.html">New User?</a>
+      <a class="home-button" href="/login.html">Login</a>
+    </div>
   </header>
 
+  <section class="hero">
+    <h2>Welcome to Beta Rydes</h2>
+    <p>
+      Experience the future of urban mobility — fast, reliable, and powered by the cloud.  
+      Join us today and discover seamless rides designed for the modern world.
+    </p>
+  </section>
 
-  <script src="js/vendor.js"></script>
-
-  <script src="js/main.js"></script>
+  <footer>
+    © 2025 Beta Rydes Inc. All Rights Reserved.
+  </footer>
 </body>
 </html>
-
